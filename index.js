@@ -9,7 +9,7 @@ function getUserbyId(){
     let userId = document.getElementById("mySearch").value;
     console.log(userId);
 
-    fetch(' http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=6D5542C11A7DACE3BEFBD50984D8F723&format=json&input_json={"steamid":'+ userId +'}', )
+    fetch(' https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=6D5542C11A7DACE3BEFBD50984D8F723&format=json&input_json={"steamid":'+ userId +'}', )
     .then(response => response.json())
     .then(responseJson => 
         displayResults(responseJson))
